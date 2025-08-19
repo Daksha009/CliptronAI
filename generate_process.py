@@ -1,8 +1,11 @@
 # this file looks for new folders inside user upload and converts them to a reel if  they are alredy converted.
 import os
+from txt_to_audio import text_to_speech_file
 
 def text_to_audio(folder):
     print("TTA -", folder)
+    with open(f"user_uploads/{folder}/desc.txt", "r") as f:
+        text = f.read()
 
 def create_reel(folder):
     print("CR -", folder)
